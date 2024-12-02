@@ -1,82 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kabya Ghosh - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    section {
+      padding: 40px 20px;
+      margin: 20px auto;
+      max-width: 800px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    /* Introduction Section */
+    .intro {
+      text-align: center;
+    }
+
+    .intro img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    /* Skills Section */
+    .skills ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skills li {
+      margin: 10px 0;
+      padding: 10px;
+      background: #e8f0fe;
+      border-left: 5px solid #6e8efb;
+      border-radius: 4px;
+    }
+
+    /* Achievements Section */
+    .achievements img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .achievements iframe {
+      width: 100%;
+      height: 300px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background: #444;
+      color: white;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Kabya Ghosh</h1>
-            <p>Robotics Enthusiast | Engineer in Progress</p>
-        </div>
-    </header>
+  <!-- Header -->
+  <header>
+    <h1>Welcome to My Portfolio</h1>
+  </header>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#achievements">Achievements</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+  <!-- Introduction Section -->
+  <section class="intro">
+    <h2>About Me</h2>
+    <img src="https://via.placeholder.com/120" alt="Profile Picture">
+    <p>Hi, I'm [Your Name], a passionate engineer and robotics enthusiast. I love creating innovative projects and pushing the boundaries of technology.</p>
+  </section>
 
-    <section id="about" class="container fade-in">
-        <h2>About Me</h2>
-        <p>I am a passionate robotics enthusiast with experience in designing innovative projects like Mission Bot. I aim to pursue engineering to expand my knowledge and make impactful contributions to technology.</p>
-    </section>
+  <!-- Skills Section -->
+  <section class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Robotics Development</li>
+      <li>JavaScript, HTML, and CSS</li>
+      <li>Arduino and IoT</li>
+      <li>Graphic Design (Affinity Suite)</li>
+    </ul>
+  </section>
 
-    <section id="projects" class="container fade-in">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Mission Bot</h3>
-            <p>A multifunctional rover with a 3-DOF arm, GPS, and solar-powered real-time charging system. Recognized nationally.</p>
-        </div>
-        <div class="project">
-            <h3>Smart Indicator System</h3>
-            <p>An Arduino-based system for vehicles with advanced control features using FlySky transmitters.</p>
-        </div>
-    </section>
+  <!-- Achievements Section -->
+  <section class="achievements">
+    <h2>Achievements</h2>
+    <img src="https://via.placeholder.com/800x400" alt="Achievement Image 1">
+    <p>Received a national award for developing the "Mission Bot" rover.</p>
+    <img src="https://via.placeholder.com/800x400" alt="Achievement Image 2">
+    <p>Presented my robotics project to the Education Minister.</p>
 
-    <section id="skills" class="container fade-in">
-        <h2>Skills</h2>
-        <div class="skills-gallery">
-            <div class="skill">
-                <img src="image/mission_bot.jpeg" alt="Robotics">
-                <p>Robotics</p>
-            </div>
-            <div class="skill">
-                <img src="images/coding.jpg" alt="Coding">
-                <p>Coding</p>
-            </div>
-            <div class="skill">
-                <img src="images/innovation.jpg" alt="Innovation">
-                <p>Innovation</p>
-            </div>
-        </div>
-    </section>
+    <!-- YouTube Video -->
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+  </section>
 
-    <section id="achievements" class="container fade-in">
-        <h2>Achievements</h2>
-        <ul>
-            <li>National award from the Prime Minister for Mission Bot.</li>
-            <li>Multiple robotics competition wins at regional and national levels.</li>
-            <li>Featured in media for innovative engineering projects.</li>
-        </ul>
-    </section>
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 [Your Name]. All rights reserved.</p>
+  </footer>
 
-    <section id="contact" class="container fade-in">
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out via email or connect with me on LinkedIn.</p>
-        <p>Email: <a href="mailto:kabya.connect24@gmail.com">kabya.connect24@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/kabya" target="_blank">linkedin.com/in/kabya</a></p>
-    </section>
+  <!-- JavaScript for Dynamic Customization -->
+  <script>
+    // Example of adding interactivity
+    document.querySelector("header h1").textContent = "Explore My Dynamic Portfolio";
+    
+    // Dynamically update introduction section
+    function updateIntroduction(name, description, imgUrl) {
+      document.querySelector(".intro img").src = imgUrl;
+      document.querySelector(".intro p").textContent = description;
+    }
 
-    <footer>
-        <p>&copy; 2024 Kabya Ghosh. All Rights Reserved.</p>
-    </footer>
+    // Example of customization
+    updateIntroduction(
+      "Your Name",
+      "I'm a robotics enthusiast and aspiring engineer, always curious about technology and its potential.",
+      "https://via.placeholder.com/120"
+    );
+
+    // Dynamically add a skill
+    function addSkill(skill) {
+      const skillList = document.querySelector(".skills ul");
+      const skillItem = document.createElement("li");
+      skillItem.textContent = skill;
+      skillList.appendChild(skillItem);
+    }
+
+    // Adding new skills dynamically
+    addSkill("AI and Machine Learning");
+    addSkill("Python Programming");
+  </script>
 </body>
 </html>
