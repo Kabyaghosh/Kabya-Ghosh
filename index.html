@@ -132,19 +132,93 @@
       }
     }
 
-    /* Skills Section */
-    .skills ul {
-      list-style: none;
-      padding: 0;
+        #skills {
+      position: relative;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.1); /* Glass effect */
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
-    .skills li {
-      margin: 10px 0;
-      padding: 10px;
-      background: #e8f0fe;
-      border-left: 5px solid #6e8efb;
-      border-radius: 4px;
+    #skills .skills {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
     }
+
+    .skill-item {
+      padding: 20px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(6px);
+      text-align: center;
+    }
+
+    .skill-item h3 {
+      margin-bottom: 15px;
+      color: #444;
+    }
+
+    .skill-item .gallery {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .skill-item .gallery img {
+      width: 100px;
+      height: 100px;
+      border-radius: 8px;
+      object-fit: cover;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .skill-item .gallery img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Super Graphic Animation */
+    #skills::before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      left: -50px;
+      width: 300px;
+      height: 300px;
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      opacity: 0.5;
+      border-radius: 50%;
+      animation: move 8s infinite ease-in-out;
+    }
+
+    #skills::after {
+      content: "";
+      position: absolute;
+      bottom: -50px;
+      right: -50px;
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      opacity: 0.5;
+      border-radius: 50%;
+      animation: move 8s infinite ease-in-out reverse;
+    }
+
+    @keyframes move {
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+      50% {
+        transform: translate(50px, 50px) scale(1.2);
+      }
+      100% {
+        transform: translate(0, 0) scale(1);
+      }
+    }
+  </style>
 
     /* Achievements Section */
     .achievements img {
@@ -213,14 +287,46 @@
 
   <!-- Skills -->
   <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Robotics Development</li>
-      <li>HTML, CSS, and JavaScript</li>
-      <li>Arduino and IoT</li>
-      <li>Graphic Design (Affinity Suite)</li>
-    </ul>
-  </section>
+  <h2>Skills</h2>
+  <div class="skills">
+    <!-- Skill 1: Robotics Development -->
+    <div class="skill-item">
+      <h3>Robotics Development</h3>
+      <div class="gallery">
+        <img src="image/robotics1.jpeg" alt="Robotics 1">
+        <img src="image/robotics2.jpeg" alt="Robotics 2">
+        <img src="image/robotics3.jpeg" alt="Robotics 3">
+      </div>
+    </div>
+    <!-- Skill 2: HTML & CSS -->
+    <div class="skill-item">
+      <h3>HTML & CSS</h3>
+      <div class="gallery">
+        <img src="image/html1.jpeg" alt="HTML 1">
+        <img src="image/html2.jpeg" alt="HTML 2">
+        <img src="image/html3.jpeg" alt="HTML 3">
+      </div>
+    </div>
+    <!-- Skill 3: Arduino and IoT -->
+    <div class="skill-item">
+      <h3>Arduino and IoT</h3>
+      <div class="gallery">
+        <img src="image/iot1.jpeg" alt="IoT 1">
+        <img src="image/iot2.jpeg" alt="IoT 2">
+        <img src="image/iot3.jpeg" alt="IoT 3">
+      </div>
+    </div>
+    <!-- Skill 4: Graphic Design -->
+    <div class="skill-item">
+      <h3>Graphic Design</h3>
+      <div class="gallery">
+        <img src="image/design1.jpeg" alt="Design 1">
+        <img src="image/design2.jpeg" alt="Design 2">
+        <img src="image/design3.jpeg" alt="Design 3">
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- Achievements -->
   <section id="achievements">
