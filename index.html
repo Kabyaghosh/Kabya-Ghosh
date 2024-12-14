@@ -15,92 +15,33 @@
     }
 
     header {
-      position: relative;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       background: linear-gradient(135deg, #6e8efb, #a777e3);
-      overflow: hidden;
       color: white;
+      text-align: center;
+      padding: 30px 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
-
-    header h1 {
-      font-size: 3rem;
-      font-weight: bold;
-      background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
-      background-size: 300%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: gradient-animation 3s infinite;
-      z-index: 1;
-    }
-
-    header p {
-      margin-top: 15px;
-      font-size: 1.2rem;
-      z-index: 1;
-    }
-
-    /* Gradient Animation */
-    @keyframes gradient-animation {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    /* Floating Particles */
-    .particle {
-      position: absolute;
-      width: 15px;
-      height: 15px;
-      background: rgba(255, 255, 255, 0.7);
-      border-radius: 50%;
-      animation: float 10s infinite ease-in-out;
-    }
-
-    .particle:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; animation-duration: 8s; }
-    .particle:nth-child(2) { top: 30%; left: 70%; animation-delay: 1s; animation-duration: 10s; }
-    .particle:nth-child(3) { top: 50%; left: 40%; animation-delay: 2s; animation-duration: 12s; }
-    .particle:nth-child(4) { top: 70%; left: 10%; animation-delay: 3s; animation-duration: 9s; }
-    .particle:nth-child(5) { top: 85%; left: 80%; animation-delay: 4s; animation-duration: 11s; }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); opacity: 1; }
-      50% { transform: translateY(-20px); opacity: 0.5; }
-    }
-
-    /* Section Styling for Other Sections */
-    section {
-      padding: 40px 20px;
-      margin: 20px auto;
-      max-width: 900px;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.8);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-  
     /* Gallery Images */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
-    }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
 
-    .gallery img {
-      width: 100%;
-      height: 150px; /* Adjust height as needed */
-      object-fit: cover;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease-in-out;
-    }
+.gallery img {
+  width: 100%;
+  height: 150px; /* Adjust height as needed */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
 
-    .gallery img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
 
     header h1 {
       font-size: 2.5rem;
@@ -278,82 +219,153 @@
       }
     }
   </style>
+
+    /* Achievements Section */
+    .achievements img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .achievements iframe {
+      width: 100%;
+      height: 300px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #333;
+      color: white;
+    }
+  </style>
 </head>
 <body>
+  <!-- Header -->
   <header>
     <h1>Welcome to My Portfolio</h1>
-    <p>Explore my work and projects in the world of technology and robotics.</p>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
   </header>
 
+  <!-- Navigation -->
   <nav>
-    <button onclick="showSection('intro')">Introduction</button>
-    <button onclick="showSection('projects')">Projects</button>
-    <button onclick="showSection('skills')">Skills</button>
-    <button onclick="showSection('contact')">Contact</button>
+    <button data-section="intro">Introduction</button>
+    <button data-section="skills">Skills</button>
+    <button data-section="achievements">Achievements</button>
   </nav>
 
+  <!-- Sections -->
+  <!-- Introduction -->
   <section id="intro" class="active">
-    <div class="intro">
-      <img src="profile.jpg" alt="Profile Picture">
-      <div class="intro-box">
-        <h3>Kabya Ghosh</h3>
-        <p>Robotics Enthusiast | CSE Engineer | Graphic Designer</p>
-      </div>
+    <h2>About Me</h2>
+    <img src="image/Kabya.png" alt="Profile Picture">
+    <div class="intro-box">
+      <h3>Hello! I am Kabya Ghosh</h3>
+      <p>
+        I am a passionate student who has recently completed my HSC in 2024. 
+        With a deep interest in technology and engineering, I aspire to become a Computer Science and Engineering (CSE) professional.
+        My journey into the world of robotics started early, and I have successfully completed various innovative robotics projects.
+        These projects have allowed me to apply my skills in coding, electronics, and problem-solving. 
+        I am eager to expand my knowledge and skills, and I am excited to contribute to the field of engineering by building impactful technologies in the future.
+      </p>
+    </div>
+
+    <h2>About My Father</h2>
+    <img src="image/Baba.png" alt="Profile Picture">
+    <div class="intro-box">
+      <h3>About My Father, Jayanta Ghosh</h3>
+      <p>
+        I come from a family deeply rooted in education. 
+        My father, Mr. Jayanta Ghosh, is the principal of Shimu-Reza MP College, where he also teaches Physics and Mathematics.
+        With his dedication to both teaching and leading, he inspires me to pursue excellence in my own educational journey.
+        His hard work and commitment to education have always been a source of motivation for me. 
+        With an approximate salary of 55,000 BDT, he continues to guide many students toward academic success.
+      </p>
     </div>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="gallery">
-      <img src="project1.jpg" alt="Project 1">
-      <img src="project2.jpg" alt="Project 2">
-      <img src="project3.jpg" alt="Project 3">
-    </div>
-  </section>
-
+  <!-- Skills -->
   <section id="skills">
-    <div class="skills">
-      <div class="skill-item">
-        <h3>Robotics</h3>
-        <div class="gallery">
-          <img src="robotics1.jpg" alt="Robotics Skill 1">
-          <img src="robotics2.jpg" alt="Robotics Skill 2">
-        </div>
-      </div>
-      <div class="skill-item">
-        <h3>Coding</h3>
-        <div class="gallery">
-          <img src="coding1.jpg" alt="Coding Skill 1">
-          <img src="coding2.jpg" alt="Coding Skill 2">
-        </div>
+  <h2>Skills</h2>
+  <div class="skills">
+    <!-- Skill 1: Robotics Development -->
+    <div class="skill-item">
+      <h3>Robotics Development</h3>
+      <div class="gallery">
+        <img src="image/robotics1.jpeg" alt="Robotics 1">
+        <img src="image/robotics2.jpeg" alt="Robotics 2">
+        <img src="image/robotics3.jpeg" alt="Robotics 3">
       </div>
     </div>
+    <!-- Skill 2: HTML & CSS -->
+    <div class="skill-item">
+      <h3>HTML & CSS</h3>
+      <div class="gallery">
+        <img src="image/html1.jpeg" alt="HTML 1">
+        <img src="image/html2.jpeg" alt="HTML 2">
+        <img src="image/html3.jpeg" alt="HTML 3">
+      </div>
+    </div>
+    <!-- Skill 3: Arduino and IoT -->
+    <div class="skill-item">
+      <h3>Arduino and IoT</h3>
+      <div class="gallery">
+        <img src="image/iot1.jpeg" alt="IoT 1">
+        <img src="image/iot2.jpeg" alt="IoT 2">
+        <img src="image/iot3.jpeg" alt="IoT 3">
+      </div>
+    </div>
+    <!-- Skill 4: Graphic Design -->
+    <div class="skill-item">
+      <h3>Graphic Design</h3>
+      <div class="gallery">
+        <img src="image/design1.jpeg" alt="Design 1">
+        <img src="image/design2.jpeg" alt="Design 2">
+        <img src="image/design3.jpeg" alt="Design 3">
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Achievements -->
+  <section id="achievements">
+    <h2>Bongobondhu Srijonshil Medha Onneshon 2022</h2>
+    <div class="gallery">
+      <img src="image/IMG_1133.png" alt="Image 1">
+      <img src="image/IMG_1131.jpeg" alt="Image 2">
+      <img src="image/IMG_1132.jpeg" alt="Image 3">
+      <img src="image/IMG_1129.jpeg" alt="Image 4">
+      <img src="image/IMG_0115.jpeg" alt="Image 5">
+      <img src="image/IMG_0903.jpeg" alt="Image 6">
+    </div>
+
+    <!-- YouTube Video -->
+    <iframe src="https://youtu.be/19x7phrlZl4?si=pRNro7kc1h1q10N1" frameborder="0" allowfullscreen></iframe>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>If you would like to work with me or learn more about my projects, feel free to reach out!</p>
-    <form action="#">
-      <input type="text" placeholder="Your Name" required><br>
-      <input type="email" placeholder="Your Email" required><br>
-      <textarea placeholder="Message" required></textarea><br>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 Kabya Ghosh. All rights reserved.</p>
+  </footer>
 
+  <!-- JavaScript -->
   <script>
-    function showSection(sectionId) {
-      const sections = document.querySelectorAll('section');
-      sections.forEach(section => {
-        section.classList.remove('active');
+    // Function to switch between sections
+    document.querySelectorAll("nav button").forEach(button => {
+      button.addEventListener("click", () => {
+        // Get the section to show
+        const sectionId = button.getAttribute("data-section");
+
+        // Hide all sections
+        document.querySelectorAll("section").forEach(section => {
+          section.classList.remove("active");
+        });
+
+        // Show the selected section
+        document.getElementById(sectionId).classList.add("active");
       });
-      document.getElementById(sectionId).classList.add('active');
-    }
+    });
   </script>
 </body>
 </html>
