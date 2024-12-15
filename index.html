@@ -14,13 +14,74 @@
       color: #333;
     }
 
-    header {
-      background: linear-gradient(135deg, #6e8efb, #a777e3);
-      color: white;
+   header {
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 30px 20px;
+      background: linear-gradient(45deg, #6e8efb, #a777e3);
+      animation: backgroundAnimation 6s infinite alternate;
+      color: white;
+      position: relative;
+      overflow: hidden;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      animation: fadeIn 2s ease-in-out;
+      z-index: 1;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      animation: fadeIn 2s ease-in-out 0.5s;
+      z-index: 1;
+    }
+
+    /* Background Glow Animation */
+    header::before {
+      content: "";
+      position: absolute;
+      width: 150%;
+      height: 150%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent);
+      animation: glowMove 8s infinite linear;
+    }
+
+    /* Animations */
+    @keyframes backgroundAnimation {
+      0% {
+        background: linear-gradient(45deg, #6e8efb, #a777e3);
+      }
+      100% {
+        background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes glowMove {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+      }
+      100% {
+        transform: translate(50%, 50%) scale(1.5);
+      }
+    }
+  
     /* Gallery Images */
 .gallery {
   display: grid;
@@ -247,7 +308,8 @@
 <body>
   <!-- Header -->
   <header>
-    <h1>Welcome to My Portfolio</h1>
+      <h1>Welcome to My Portfolio</h1>
+    <p>Crafting innovative solutions with passion and dedication.</p>
   </header>
 
   <!-- Navigation -->
